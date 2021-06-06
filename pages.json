@@ -1,0 +1,85 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/vant/vant",
+			"style": {
+				"navigationBarTitleText": "vant",
+				"navigationBarBackgroundColor": "#fff",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"usingComponents": {
+			"van-button": "/wxcomponents/vant/button/index",
+			"van-card": "/wxcomponents/vant/card/index",
+			"van-grid": "/wxcomponents/vant/grid/index",
+			"van-grid-item": "/wxcomponents/vant/grid-item/index",
+			"van-icon": "/wxcomponents/vant/icon/index",
+			"van-search": "/wxcomponents/vant/search/index",
+			"van-popup": "/wxcomponents/vant/popup/index",
+			"van-toast": "/wxcomponents/vant/toast/index"
+		}
+	},
+	"subPackages": [{
+		"root": "pagecharts",
+		"pages": [{
+				"path": "pages/test/test",
+				"style": {
+					"navigationBarTitleText": "test",
+					"navigationBarBackgroundColor": "#fff"
+				}
+			},
+			{
+				"path": "pages/echarts/echarts",
+				"style": {
+					"navigationBarTitleText": "echarts",
+					"navigationBarBackgroundColor": "#fff",
+					"usingComponents": {
+						"ec-canvas": "/wxcomponents/ec-canvas/ec-canvas"
+					}
+				}
+			}
+		]
+	}],
+	"mp-weixin": {
+		"usingComponents": true,
+		"optimization": {
+			"subPackages": true
+		}
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#07c160",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/home/index",
+			"iconPath": "static/image/home_default.png",
+			"selectedIconPath": "static/image/home_selected.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/my/index",
+			"iconPath": "static/image/my_default.png",
+			"selectedIconPath": "static/image/my_selected.png",
+			"text": "我的"
+		}]
+	}
+}
